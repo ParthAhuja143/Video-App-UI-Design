@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.optionsScreen {
+  flex: 0.06;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  height: 100%;
+  border-right: rgb(233, 233, 233) 1px solid;
+}
+
+.optionsScreen .optionsScreen_logo {
+  margin-top: 30px;
+}
+
+.optionsScreen .optionsScreen_logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.optionsScreen .optionsScreen_options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.option1,
+.option2,
+.option3,
+.option4,
+.option5,
+.option6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.optionsScreen button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: rgb(168, 168, 168);
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+
+.optionsScreen button:focus {
+  background-color: rgb(224, 244, 241);
+  color: rgb(13, 129, 111);
+}
+
+i {
+  font-size: 1.3rem !important;
+}
+
+.optionsScreen .optionsScreen_user {
+  margin-bottom: 30px;
+}
+
+.optionsScreen .optionsScreen_user img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.mainScreen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0.65;
+}
+
+.mainScreen .mainScreen_title {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px 20px;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.mainScreen .mainScreen_title .mainScreen_backBtn button {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 17px;
+  color: grey;
+  font-weight: 800;
+}
+
+.mainScreen .mainScreen_title .mainScreen_meetingTitle {
+  margin: auto 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.mainScreen .mainScreen_title .mainScreen_meetingTeam {
+  color: rgb(63, 76, 142);
+  background-color: rgb(208, 211, 227);
+  border-radius: 20px;
+  padding: 7px 15px;
+  margin: 10px;
+}
+
+.mainScreen .mainScreen_title .mainScreen_meetingTeam i {
+  margin-right: 10px;
+}
+
+.mainScreen_attendance {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: auto 10px;
+  color: rgb(99, 99, 99);
+  font-weight: bolder;
+}
+
+.mainScreen_attendance .mainScreen_attendanceLeft {
+  flex: 0.7;
+  display: flex;
+  height: 70px;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.mainScreen_attendance
+  .mainScreen_attendanceLeft
+  .mainScreen_attendanceInvited {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainScreen_attendanceText,
+.mainScreen_attendanceCount {
+  margin: 10px 5px;
+}
+
+.mainScreen_attendanceLogo {
+  margin: 5px;
+}
+
+.mainScreen_attendanceCount {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(237, 250, 248);
+  color: rgb(1, 199, 166);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.mainScreen_absenteesCount {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(250, 237, 237);
+  color: rgb(199, 47, 1);
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.mainScreen_addCallRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: rgb(1, 199, 166);
+}
+
+.mainScreen_addCallRight .mainScreen_addCallButton {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(1, 199, 166);
+  color: white;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+
+.mainScreen_addCallRight .mainScreen_addCallButton button {
+  outline: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(1, 199, 166);
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.mainScreen_video {
+  background-color: rosybrown;
+  width: 98%;
+  flex: 0.99;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+}
+.mainScreen_video .mainScreen_videoUser {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: fit-content;
+  align-items: center;
+  color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.mainScreen_video .mainScreen_videoUser .mainScreen_videoUserPic {
+  margin-right: 10px;
+}
+
+.mainScreen_video .mainScreen_videoUser .mainScreen_videoUserPic img {
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.mainScreen_video
+  .mainScreen_videoUser
+  .mainScreen_videoUserInfo
+  .mainScreen_videoUserRole {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.mainScreen_video
+  .mainScreen_videoUser
+  .mainScreen_videoUserInfo
+  .mainScreen_videoUserName {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.mainScreen_videoTimer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+  margin: 10px auto;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  backdrop-filter: blur(4px);
+}
+
+.mainScreen_videoTimer .mainScreen_videoTimerWhiteOutline {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainScreen_videoTimer .mainScreen_videoTimerRed {
+  background-color: red;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+}
+
+.mainScreen_videoTimer .mainScreen_TimerTime {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.mainScreen_videoButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.mainScreen_videoButtons button {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(105, 105, 105, 0.37);
+  backdrop-filter: blur(4px);
+  color: white;
+  border: none;
+  margin: 10px;
+}
+
+.mainScreen_videoButtons .mainScreen_maximise,
+.mainScreen_videoButtons .mainScreen_mute,
+.mainScreen_videoButtons .mainScreen_shareVideo,
+.mainScreen_videoButtons .mainScreen_settings {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.mainScreen_videoButtons .mainScreen_leaveCall {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: rgb(252, 93, 91);
+}
+
+.chatScreen {
+  height: 98vh;
+  width: 100%;
+  flex: 0.3;
+  display: flex;
+  padding: 20px 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+  position: relative;
+  background-color: rgb(237, 239, 244);
+}
+
+.chatScreen .chatScreen_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  height: 70px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.chatScreen .chatScreen_title .chatScreen_titleTitle {
+  flex: 0.4;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.chatScreen .chatScreen_chat {
+  width: 100%;
+  max-width: 600px;
+}
+
+.chatScreen .chatScreen_title .chatScreen_titleBtn {
+  display: flex;
+  flex-direction: row;
+  flex: 0.6;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.chatScreen .chatScreen_title .chatScreen_titleBtn button {
+  height: 35px;
+  width: max-content;
+  border: none;
+  font-weight: 600;
+  color: grey;
+  margin: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px 10px;
+  text-align: center;
+  transition: all 0.2s ease-in;
+}
+
+.chatScreen .chatScreen_title .chatScreen_titleBtn button:focus {
+  color: rgb(13, 129, 111);
+  background-color: rgb(209, 230, 231);
+}
+
+.chatScreen .chatScreen_chat .chatScreen_chatWindow {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 20px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.chatScreen_chat .chatScreen_chatWindow .chatScreen_chatMessage {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  width: 99%;
+  max-width: 99%;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.chatScreen_chat .chatScreen_chatWindow .you {
+  flex-direction: row-reverse;
+}
+
+.chatScreen_chat
+  .chatScreen_chatWindow
+  .chatScreen_chatMessage
+  .chatScreen_chatUserPic {
+  width: 30px;
+  height: 30px;
+  max-height: 100%;
+  margin: 10px;
+  border-radius: 100%;
+}
+
+.chatScreen_chat
+  .chatScreen_chatWindow
+  .chatScreen_chatMessage
+  .chatScreen_chatUserPic
+  img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  bottom: 0px;
+  position: absolute;
+}
+.chatScreen_chatUserMessage {
+  width: fit-content;
+  max-width: 99%;
+}
+.chatScreen_chatUserMessage .chatScreen_chatUser {
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 0px;
+}
+
+.chatScreen_chatMessage .chatScreen_chatUserMessage .chatScreen_chatText {
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  max-width: max-content;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.you .chatScreen_chatUserMessage .chatScreen_chatText {
+  background-color: rgb(208, 211, 227);
+}
+
+.chatScreen .chatScreen_chatInput {
+  height: 70px;
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.chatScreen .chatScreen_chatInput form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.chatScreen .chatScreen_chatInput form input {
+  width: 90%;
+  height: 60px;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-size: bold;
+  position: relative;
+}
+
+.chatScreen .chatScreen_chatInput form button {
+  position: absolute;
+  height: 50px;
+  right: 30px;
+  width: 50px;
+  outline: none;
+  border: none;
+  background-color: rgb(0, 163, 137);
+  color: white;
+  border-radius: 10px;
+}
